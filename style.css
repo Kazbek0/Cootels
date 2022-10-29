@@ -1,11 +1,81 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,
-html{height:100%}
-body{line-height:1}
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-blockquote,q{quotes:none}
-blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
-table{border-collapse:collapse;border-spacing:0}
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 
 main{width: 100%; height: 100%;position: relative;}
@@ -17,14 +87,14 @@ line-height: 39px;color:rgba(25, 34, 82, 1);margin-left: 120px;margin-top: 46px;
 }
 
 .Rooms{position: absolute;font-family: 'Inter',Medium;font-weight: 500;font-style: 16px;line-height: 19px;
-color:rgba(25, 34, 82, 1);margin-top: 56px;margin-left: 586px;
+color:rgba(25, 34, 82, 1);margin-top: 56px;margin-left: 400px;
 }
 
 .Reservation{position: absolute;font-family: 'Inter',Medium;font-weight: 500;font-style: 16px;line-height: 19px;
-    color:rgba(25, 34, 82, 1);margin-top: 56px;margin-left: 671px;}
+    color:rgba(25, 34, 82, 1);margin-top: 56px;margin-left: 600px;}
 
 .Contacs{position: absolute;font-family: 'Inter',Medium;font-weight: 500;font-style: 16px;line-height: 19px;
-    color:rgba(25, 34, 82, 1);margin-top: 56px;margin-left: 795px;}
+    color:rgba(25, 34, 82, 1);margin-top: 56px;margin-left: 850px;}
 
 .Get{width: 121px;height: 47px;position: absolute;background-color:rgba(14, 23, 52, 1);margin-left: 1199px;
 margin-top: 37px;border-radius: 4px;}
@@ -282,7 +352,7 @@ input {display: none;}
        header{width: 100%;height: 120px;position: absolute;}
        footer{width: 100%;position: absolute;margin: 0 auto;}
 
-       .Nat{width: 100%;}
+       .Nat{width: 99%;}
        .Coz{width: 100%;}
        .Cabin{width: 100%;}
        .Many{width: 100%;}
@@ -367,17 +437,17 @@ input {display: none;}
     .main { width: 100%;height: 5000px;}
     body{height: 5000px;}
     
-    .Coz{width: 100%;}
-    .Cabin{width: 100%;}
-    .Many{width: 100%;}
-    .Start{width: 100%;}
-    .Hear{width: 100%;}
+    .Coz{width: 99%;}
+    .Cabin{width: 99%;}
+    .Many{width: 99%;}
+    .Start{width: 99%;}
+    .Hear{width: 99%;}
 
-    header{width: 100%;height: 100%;overflow: auto;margin-left: 0 auto;}
+    header{width: 99%;height: 100%;overflow: auto;margin-left: 0 auto;}
 
-    .Cootels{margin-left: 100px;}
-    .Rooms{margin-left: 300px;}
-    .Reservation{margin-left: 400px;}
+    .Cootels{margin-left: 70px;}
+    .Rooms{margin-left: 260px;}
+    .Reservation{margin-left: 360px;}
     .Contacs{margin-left: 530px;}
     .Get{margin-left: 620px;}
 
@@ -482,13 +552,13 @@ input {display: none;}
     
     
     
-    .Coz{width: 100%;}
-    .Cabin{width: 100%;}
-    .Many{width: 100%;}
-    .Start{width: 100%;}
-    .Hear{width: 100%;}
+    .Coz{width: 99%;}
+    .Cabin{width: 97%;}
+    .Many{width: 99%;}
+    .Start{width: 99%;}
+    .Hear{width: 99%;}
 
-    header{width: 100%;height: 100%;overflow: auto;margin-left: 0 auto;}
+    header{width: 99%;height: 100%;overflow: auto;margin-left: 0 auto;}
 
     .main {width: 540px;  height: 100%;}
 
@@ -571,7 +641,7 @@ input {display: none;}
         .N-img2{width: 30%;margin-left: 145px;margin-top: 187px;}
         .N-img3{width: 30%;margin-left: 285px;}
    
-        .Nature{margin-left: 20px;font-size: 40px;line-height: 50px;margin-top: 620px;}
+        .Nature{margin-left: 20px;font-size: 40px;line-height: 50px;margin-top: 620px;width: 90%;}
         .N-One{margin-left: 20px;margin-top:800px;position:absolute;width: 400px;}
         .N-Res{margin-left:250px;margin-top: 950px;}
 
@@ -600,7 +670,7 @@ input {display: none;}
         .M-Learn1{margin-left: 145px;margin-top: 4710px;}
         .M-V1{margin-left: 250px;margin-top: 4716px;}
 
-        .M-img2{margin-top: 4800px;margin-left: 125px;width: 95%;}
+        .M-img2{margin-top: 4800px;margin-left: 105px;width: 95%;}
         .M-Double{margin-top: 5350px;margin-left: 230px;}
         .M-Best2{margin-top: 5400px;margin-left: 120px;width: 90%;}
         .M-Learn2{margin-top: 5490px;margin-left: 140px;}
@@ -622,12 +692,12 @@ input {display: none;}
         .S-Check{margin-left: 150px;margin-top: 7100px;}
         .S-Enjoy{margin-left: 150px;margin-top: 7180px;}
 
-        .H-Hear{margin-left: 5px;margin-top: 6880px;font-size: 24px;width: 100%;}
+        .H-Hear{margin-left: 2px;margin-top: 6880px;font-size: 24px;width: 100%;}
         .H-img1{margin-left: 170px;margin-top: 6980px;}
         .H-Great{width: 90%;margin-top: 7150px;margin-left: 10px;}
         .H-Kirana{margin-left: 260px;margin-top:7330px ;}
 
-        footer{margin-bottom:-3000px;width: 100%;}
+        footer{margin-bottom:-3000px;width: 99%;}
         .hed-Cootels{margin:30px ;position: absolute;}
         .F-Your{margin:80px 10px;}
 
@@ -653,7 +723,7 @@ input {display: none;}
 
 
 @media screen and (max-device-width:424px){
-    main{width: 320px;padding:0 15px;margin-left: 20%;height: 4800px;}
+    main{width: 320px;padding:0 15px;height: 4800px;}
     body{height: 5000px;width: 320px;}
     .btn-menu{margin-left:-120px;}
     header{width: 100%;height: 100%;overflow: auto;}
@@ -745,10 +815,8 @@ input {display: none;}
 }
 
 
-@media screen and (max-device-width:375px){
-    htnl{width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;}
+@media screen and (max-device-width:424px){
+    
     .main {
         width: 100%;
         padding: 0 15px;
@@ -760,12 +828,13 @@ input {display: none;}
     body{height: 4800px;width: 100%;
         max-width: 100%;
         overflow-x: hidden;}
+    .Nat{width: 100%;}
     .Coz{width: 100%;}
     .Cabin{width: 100%;}
     .Many{width: 100%;}
     .Start{width: 100%;}
     .Hear{width: 100%;}
-    header{width: 100%;height: 100%;overflow: auto;margin-left: -100px;padding-left:0 auto ;}
+    header{width: 100%;height: 100%;overflow: auto;padding-left:0 auto ;}
 
    
 
@@ -844,83 +913,150 @@ input {display: none;}
     
         
     
-        .N-img1{width: 27%;margin-left: -70px;}
-        .N-img2{width: 29%;margin-left: 30px;margin-top: 167px;}
-        .N-img3{width: 27%;margin-left: 140px;}
+        .N-img1{width: 35%;margin-left: 0px;}
+        .N-img2{width: 34%;margin-left: 123px;margin-top: 180px;}
+        .N-img3{width: 35%;margin-left: 240px;}
    
-        .Nature{margin-left: -70px;font-size: 36px;line-height: 50px;margin-top: 620px;width: 90%;}
-        .N-One{margin-left: -70px;margin-top:800px;position:absolute;width: 400px;width: 90%;}
-        .N-Res{margin-left:80px;margin-top: 950px;}
+        .Nature{font-size: 36px;line-height: 50px;margin-top: 620px;width: 99%;}
+        .N-One{margin-top:800px;position:absolute;width: 400px;width: 100%;}
+        .N-Res{margin-left:150px;margin-top: 950px;}
 
-        .C-img1{margin-top: 1050px;height: 60%;width: 85%;left: -60px;}
-        .Cozy{margin-left: -70px;margin-top: 1530px;width: 90%;font-size: 23px;}
-        .C-Our{margin-left: -70px;margin-top: 1650px;width:90% ;}
-        .C-Coot{margin-left: -70px;margin-top: 1820px;width:90% ;}
+        .C-img1{margin-top: 1050px;height: 60%;width: 100%;left: 15px;}
+        .Cozy{margin-left: 20px;margin-top: 1530px;width: 98%;font-size: 23px;}
+        .C-Our{margin-left: 10px;margin-top: 1650px;width:90% ;}
+        .C-Coot{margin-left: 10px;margin-top: 1820px;width:90% ;}
         .C-L1{margin-left: 80px;margin-top: 1980px;}
 
-        .C-Cabin{margin-top: 2580px;margin-left: -60px;}
-        .Cab-img1{margin-left: -75px;margin-top: 2150px;width: 85%;}
-        .Cab-D{margin-left: -70px;margin-top: 2650px;width: 90%;}
-        .Cab-img2{margin-left: -75px;margin-top: 2900px;width: 85%;}
-        .Cab-100{margin-left: -70px;margin-top: 3300px;}
-        .Cab-We{margin-top: 3370px;margin-left: -70px;width: 90%;}
+        .C-Cabin{margin-top: 2560px;margin-left: 20px;}
+        .Cab-img1{margin-left: 15px;margin-top: 2140px;width: 100%;}
+        .Cab-D{margin-left: 0px;margin-top: 2630px;width: 99%;}
+        .Cab-img2{margin-left: 5px;margin-top: 2900px;width: 100%;}
+        .Cab-100{margin-left: 10px;margin-top: 3300px;}
+        .Cab-We{margin-top: 3370px;margin-left: 10px;width: 100%;}
         .C-L2{margin-left: 80px;margin-top: 2800px;}
-        .C-L3{margin-left: 85px;margin-top: 3500px;}
+        .C-L3{margin-left: 100px;margin-top: 3520px;}
 
-        .M-Many{margin-left: 20px;margin-top: 3600px;font-size: 38px;width: 80%;}
-        .M-There{margin-left:20px;margin-top: 3710px;width: 90%;font-size: 20px;}
+        .M-Many{margin-left: 120px;margin-top: 3600px;font-size: 38px;width: 99%;}
+        .M-There{margin-left:100px;margin-top: 3720px;width: 100%;font-size: 20px;}
         .M-Exp{margin-left: 170px;margin-top: 3850px;}
 
-        .M-img1{margin-left: 30px;margin-top: 4000px;width: 85%;}
-        .M-Single{margin-left: 115px;margin-top: 4470px;}
-        .M-Best{margin-left: 25px;margin-top: 4520px;width: 90%;}
-        .M-Learn1{margin-left: 215px;margin-top: 4610px;}
-        .M-V1{margin-left: 310px;margin-top: 4616px;}
+        .M-img1{margin-left: 110px;margin-top: 4000px;width: 100%;}
+        .M-Single{margin-left: 155px;margin-top: 4450px;}
+        .M-Best{margin-left: 125px;margin-top: 4500px;width: 99%;}
+        .M-Learn1{margin-left: 225px;margin-top: 4610px;width: 150px;}
+        .M-V1{margin-left: 380px;margin-top: 4616px;}
 
-        .M-img2{margin-top: 4700px;margin-left: 30px;width: 85%;}
-        .M-Double{margin-top: 5130px;margin-left: 110px;}
-        .M-Best2{margin-top: 5190px;margin-left: 30px;width: 90%;}
-        .M-Learn2{margin-top: 5320px;margin-left: 225px;}
-        .M-V2{margin-top: 5325px;margin-left: 320px;}
+        .M-img2{margin-top: 4700px;margin-left: 120px;width: 100%;}
+        .M-Double{margin-top: 5130px;margin-left: 190px;width: 200px;}
+        .M-Best2{margin-top: 5190px;margin-left: 130px;width: 99%;}
+        .M-Learn2{margin-top: 5300px;margin-left: 245px;width: 150px;}
+        .M-V2{margin-top: 5305px;margin-left: 400px;}
         
-        .M-img3{margin-left:30px;margin-top:5400px;width: 85%;}
-        .M-Cootage{margin-left: 130px;margin-top: 5800px;}
-        .M-Best3{margin-left: 30px;margin-top: 5860px;width:85% ;}
-        .M-Learn3{margin-left: 180px;margin-top: 5980px;}
-        .M-V3{margin-left: 280px;margin-top: 5987px;}
+        .M-img3{margin-left:110px;margin-top:5400px;width: 100%;}
+        .M-Cootage{margin-left: 210px;margin-top: 5820px;}
+        .M-Best3{margin-left: 100px;margin-top: 5860px;width:100% ;}
+        .M-Learn3{margin-left: 220px;margin-top: 5960px;width: 150px;}
+        .M-V3{margin-left: 380px;margin-top: 5967px;}
 
-        .S-Start{margin-left: 10px;margin-top:6550px;font-size: 25px;}
-        .S-How{margin-left: -5px;margin-top: 6590px;width: 100%;font-size: 27px;}
-        .S-you{margin-left: -5px;margin-top: 6650px;width: 93%;font-size: 17px;}
-        .S-Con{margin-left: -5px;margin-top: 6800px;}  
-        .S-Exp{margin-left: 160px;margin-top: 6817px;}
+        .S-Start{margin-left: 100px;margin-top:6550px;font-size: 25px;width: 100%;}
+        .S-How{margin-left: 85px;margin-top: 6590px;width: 100%;font-size: 27px;}
+        .S-you{margin-left: 65px;margin-top: 6650px;width: 105%;font-size: 17px;}
+        .S-Con{margin-left:70px;margin-top: 6800px;}  
+        .S-Exp{margin-left: 260px;margin-top: 6817px;width:144px}
 
-        .S-Choose{margin-left: 10px;margin-top: 6920px;}
-        .S-Check{margin-left: -5px;margin-top: 7000px;}
-        .S-Enjoy{margin-left: 10px;margin-top: 7080px;}
+        .S-Choose{margin-left: 90px;margin-top: 6920px;width: 100%;}
+        .S-Check{margin-left: 90px;margin-top: 7000px; width: 100%;}
+        .S-Enjoy{margin-left: 90px;margin-top: 7080px; width: 100%;}
 
-        .H-Hear{margin-left: -69px;margin-top: 6780px;font-size: 27px;width: 100%;}
-        .H-img1{margin-left: 60px;margin-top: 6900px;}
-        .H-Great{width: 90%;margin-top: 7050px;margin-left: -75px;}
-        .H-Kirana{margin-left: 90px;margin-top:7220px ;}
+        .H-Hear{margin-left: 10px;margin-top: 6780px;font-size: 27px;width: 100%;}
+        .H-img1{margin-left: 90px;margin-top: 6900px;}
+        .H-Great{width: 99%;margin-top: 7050px;margin-left: 5px;}
+        .H-Kirana{margin-left: 120px;margin-top:7230px ;}
 
-        footer{margin-bottom:-3000px;width: 100%;left: -60px;}
+        footer{margin-bottom:-3000px;width: 120%;}
         .hed-Cootels{margin:30px ;position: absolute;}
         .F-Your{margin:90px 10px;margin-left: 20px;}
 
         .hed-Rooms{margin-left:250px;margin-top:40px ;}
-        .Ro1{margin-left: 220px;margin-top: 70px;width: 100%;}
-        .Ro2{margin-left: 220px;margin-top: 110px;width: 100%;}
-        .Ro3{margin-left: 220px;margin-top: 150px;width: 100%;}
-        .Ro4{margin-left: 220px;margin-top: 180px;width: 100%;}
+        .Ro1{margin-left: 220px;margin-top: 70px;}
+        .Ro2{margin-left: 220px;margin-top: 110px;}
+        .Ro3{margin-left: 220px;margin-top: 150px;}
+        .Ro4{margin-left: 220px;margin-top: 180px;}
 
         .Reser{margin-top: 230px;margin-left: 20px;}
         .Re1{margin-top: 250px;margin-left: 20px;}
         .Re2{margin-top: 280px;margin-left: 20px;}
 
-        .Cont{margin-left:230px;margin-top:220px;width: 100%;}
-        .C1{margin-left: 220px;margin-top: 250px;width: 100%;}
-        .C2{margin-left: 220px;margin-top: 280px;width: 100%;}
-        .C3{margin-left: 220px;margin-top: 310px;width: 100%;}
+        .Cont{margin-left:230px;margin-top:220px;}
+        .C1{margin-left: 220px;margin-top: 250px;}
+        .C2{margin-left: 220px;margin-top: 280px;}
+        .C3{margin-left: 220px;margin-top: 310px;}
+}
+
+@media screen and (max-device-width:320px){
+
+
+    main{margin-left: -15px;}
+    header{margin-left: -15px;}
+    .Coz{margin-left: -15px;}
+    footer{margin-left: -15px;}
+
+ .Nature{width: 97%;margin-left: 5px;}
+ .N-One{width: 96%;margin-left: 5px;}
+ .N-Res{margin-left: 135px;}   
+
+ .N-img1{width: 30%;margin-left: 5px;}
+ .N-img2{width: 30%;margin-left: 110px;margin-top: 170px;}
+ .N-img3{width: 30%;margin-left: 215px;}
+
+ .btn-menu{margin-left: -200px;}
+
+ .Nature{font-size: 35px;width: 301px;}
+
+ .C-img1{width: 97%;margin-left: 5px;}
+
+ .Cozy{margin-left: 20px;}
+ .C-Our{margin-left: 20px;}
+ .C-Coot{margin-left: 20px;}
+
+ .Cab-img1{margin-left: 5px;width: 97%;}
+ .Cab-img2{margin-left: 5px;width: 97%;}
+
+ .C-Cabin{margin-left: 5px;}
+ .Cab-D{margin-left: 6px;width: 98%;}
+
+ .Cab-100{margin-left: 5px;}
+ .Cab-We{margin-left: 7px;width: 97%;}
+
+ .M-Many{margin-left:100px;}
+ .M-There{margin-left: 105px;width: 97%;}
+
+ .M-Exp{margin-top: 3900px;}
+
+ .M-img1{margin-left: 105px;width: 97%;}
+ .M-img2{margin-left: 105px;width: 97%;}
+ .M-img3{margin-left: 105px;width: 97%;}
+
+ .M-Best{margin-left: 105px;}
+ .M-Best2{margin-left: 105px;}
+ .M-Best3{margin-left: 105px;width: 90%;}
+
+ .Start{margin-top:-450px ;}
+ .S-How{margin-left:75px;}
+ .S-you{width: 98%;margin-left: 75px;}
+ .S-Con{margin-left: 80px;}
+ .S-Exp{margin-left: 240px;}
+
+ .S-Choose{margin-left: 80px;}
+ .S-Check{margin-left: 75px;}
+ .S-Enjoy{margin-left: 75px;}
+
+ .H-Hear{margin-left: 0px;}
+ .H-Great{margin-left: 0;width: 98%;}
+ .H-Kirana{margin-top: 7250px; ;}
+
+ footer{width: 103%;}
+
+
 }
 
